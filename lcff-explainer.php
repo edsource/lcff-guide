@@ -7,7 +7,6 @@
 		=================================================*/
 		$navigation = get_field('lcff_navigation', 89272);
 		$content = get_field('lcff_slides', 89272);
-		//var_dump($content);
 
 		/* META TAGS
 		=================================================*/
@@ -96,11 +95,13 @@
 						$ret .= '</div>';
 					$ret .= '</div>';
 
-					// POPULATE SLIDES //
+					// CONTENT //
 					$ret .= '<aside class="lcff-content">';
+
 						for($i=0 ; $i < sizeof($content) ; $i++){
 							$ret .= '<div class="lcff-slide" type="'.$i.'">';$ret .= $content[$i]['slide_contents'];$ret .= '</div>';
-						}		
+						}
+
 					$ret .= '</aside>';
 				$ret .= '</div>';
 			$ret .=  '</section>';
