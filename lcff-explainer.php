@@ -16,20 +16,11 @@
 
 		/* HEADER TAGS
 		=================================================*/
-		$ret .= '<div id="rs-contain" role="article">';
-			$ret .= '<section id="rs-header">';
-				$ret .= '<div class="rs-site">';
-					$ret .= '<h2><a href="http://edsource.org">EdSource</a></h2>';
-				$ret .= '</div>';
-				$ret .= '<div><h2><a href="http://edsource.org/restraint-in-the-shadows">Local Control Funding Formula Guide</a></h2></div>';
-				$ret .= '<div>';
-					$ret .= '<a id="lcff-nav-toggle" href="#" onclick="return false;">Hide Navigation</a>';
-				$ret .= '</div>';
-			$ret .= '</section>';
+		print slick_header('LCFF', $id);
 
 		/* CONTENT TAGS
 		=================================================*/
-			$ret .= '<section id="rs-body">';
+			$ret .= '<section id="slick-body">';
 				$ret .= '<div id="lcff-nav" state="show">';
 					$ret .= '<div>';
 						$ret .= '<h2>Explore Guide</h2>';
@@ -91,6 +82,7 @@
 					$ret .= '</aside>';
 				$ret .= '</div>';
 			$ret .=  '</section>';
+			$ret .= slick_footer();
 		$ret .=  '</div>';
 
 		

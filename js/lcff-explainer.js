@@ -2,14 +2,16 @@ jQuery(document).ready(function(){
 
 	/* SHOW OR HIDE NAV
 	=====================================*/
-	jQuery('#lcff-nav-toggle').on('click', function(){
+	jQuery('.slick-nav-hed a').on('click', function(){
 		if (jQuery('#lcff-nav').attr('state') === 'show'){
-			jQuery('#lcff-nav').hide().attr('state','hide');
-			jQuery('#lcff-slides').css('width','100%');
+			jQuery('#lcff-nav').animate({'left': '-1000px'}, 500).attr('state','hide');
+			jQuery('#lcff-slides').animate({'width': '100%'}, 500);
+			jQuery(this).text('Show Navigation');
 		}
 		else {
-			jQuery('#lcff-nav').show().attr('state','show');
-			jQuery('#lcff-slides').css('width','70%');
+			jQuery('#lcff-nav').animate({'left': '1%'}, 500).attr('state','show');
+			jQuery('#lcff-slides').animate({'width': '70%'}, 500);
+			jQuery(this).text('Hide Navigation');
 		}
 	})
 
@@ -40,7 +42,7 @@ jQuery(document).ready(function(){
 			else if (slide == 22 || slide == 23){subnav = 2;}
 			else if (slide >= 27){subnav = 3;}
 
-			count = [12,6,1,1], height = (29 * count[subnav]) + 3;
+			count = [12,6,1,3], height = (29 * count[subnav]) + 3;
 			jQuery('.lcff-subnav:not(.lcff-subnav[subnav="' + subnav + '"])').animate({height: 0}, 300).dequeue();
 			jQuery('.lcff-subnav[subnav="' + subnav + '"]').animate({height: height + 'px'}, 500, function(){
 				//Get height right
