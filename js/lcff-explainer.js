@@ -69,14 +69,14 @@ jQuery(document).ready(function(){
 
 		/* Top NavBar Navigation
 		-----------------------------------*/
-		if (slide !== 0 && slide !== 'end'){
+		if (slide !== 0 && slide !== 28){
 			jQuery('#lcff-top>div').add('#lcff-bottom>div').fadeIn(500);
 		}
 		else if (slide === 0) {
 			jQuery('#lcff-top>div:first-of-type').add('#lcff-bottom>div:first-of-type').fadeOut(500);
 			jQuery('#lcff-top>div:last-of-type').add('#lcff-bottom>div:last-of-type').fadeIn(500);
 		}
-		else if (slide === 'end'){
+		else if (slide === 28){
 			jQuery('#lcff-top>div:last-of-type').add('#lcff-bottom>div:last-of-type').fadeOut(500);
 			jQuery('#lcff-top>div:first-of-type').add('#lcff-bottom>div:first-of-type').fadeIn(500);
 		}

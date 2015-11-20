@@ -28,6 +28,7 @@
 	#lcff-nav>div:first-of-type {border-bottom: dashed 1px #555;width: 80%;margin: 0 auto;}
 	#slick-contain #lcff-nav ul {list-style-type: none;padding:0 0 0 1em;}
 	#slick-contain #lcff-nav i {margin:0 10px 0 0;;color:#88419d;visibility: hidden;float:left;}
+	#slick-contain #lcff-nav i.fa-external-link-square {visibility:visible;margin-top:4px;}
 	#slick-contain #lcff-nav li {font-family:'Montserrat', san-serif;color: #333;font-size:.8em;line-height: 1.6em;}
 	#slick-contain #lcff-nav a {color:#333;}
 	#lcff-nav h2 {font-size: 1em;margin: 10px 0;color: #333;}
@@ -47,6 +48,12 @@
 @media screen and (min-width:768px){}
 
 @media screen and (min-width:1028px){
+	#slick-body {min-height:500px;}
 	#lcff-nav {width:26%;position: fixed;top: 105px;left: 1%;display:block;background: #b3cde3;}
 	#lcff-slides {width:70%;float:right;}
 }
+
+
+
+
+

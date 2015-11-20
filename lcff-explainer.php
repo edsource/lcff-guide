@@ -39,7 +39,15 @@
 
 									for ($j = 0 ; $j < sizeof($navigation[$i]['lcff_sub_navigation']) ; $j++){
 										$slides += 1;
-										$ret .= '<i class="fa fa-arrow-circle-right" type="'.$slides.'"></i><li><a href="#" onclick="ga(\'send\',\'event\', \'NEW LCFF GUIDE\', \'NAVIGATION\', \''.$navigation[$i]['slide_title'].'\');return false;" type="'.$slides.'">'.$navigation[$i]['lcff_sub_navigation'][$j]['slide_title'].'</a></li>';
+										if ($navigation[$i]['lcff_sub_navigation'][$j]['slide_title'] == 'Compare School Districts'){
+											$ret .= '<li><a target="_blank" href="http://edsource.org/local-control-funding-formula-guide/index.html" onclick="ga(\'send\',\'event\', \'NEW LCFF GUIDE\', \'NAVIGATION\', \''.$navigation[$i]['slide_title'].'\');" type="'.$slides.'">'.$navigation[$i]['lcff_sub_navigation'][$j]['slide_title'].'</a><i class="fa fa-external-link-square"></i></li>';
+										}
+										else if ($navigation[$i]['lcff_sub_navigation'][$j]['slide_title'] == 'States in Motion'){
+											$ret .= '<li><a target="_blank" href="http://edsource.org/2015/states-in-motion-school-finance-naep-child-poverty/83303" onclick="ga(\'send\',\'event\', \'NEW LCFF GUIDE\', \'NAVIGATION\', \''.$navigation[$i]['slide_title'].'\');" type="'.$slides.'">'.$navigation[$i]['lcff_sub_navigation'][$j]['slide_title'].'</a><i class="fa fa-external-link-square"></i></li>';
+										}
+										else {
+											$ret .= '<i class="fa fa-arrow-circle-right" type="'.$slides.'"></i><li><a href="#" onclick="ga(\'send\',\'event\', \'NEW LCFF GUIDE\', \'NAVIGATION\', \''.$navigation[$i]['lcff_sub_navigation'][$j]['slide_title'].'\');return false;" type="'.$slides.'">'.$navigation[$i]['lcff_sub_navigation'][$j]['slide_title'].'</a></li>';
+										}
 									}
 
 									$ret .= '</ul></li>';
