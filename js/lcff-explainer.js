@@ -42,9 +42,8 @@ jQuery(document).ready(function(){
 			else if (slide == 22 || slide == 23){subnav = 2;}
 			else if (slide >= 27){subnav = 3;}
 
-			count = [12,6,1,3], height = (29 * count[subnav]) + 3;
 			jQuery('.lcff-subnav:not(.lcff-subnav[subnav="' + subnav + '"])').animate({height: 0}, 300).dequeue();
-			jQuery('.lcff-subnav[subnav="' + subnav + '"]').animate({height: height + 'px'}, 500, function(){
+			jQuery('.lcff-subnav[subnav="' + subnav + '"]').animate({height: 0 + 'px'}, 1, function(){
 				//Get height right
 				var subH = 0, subL = jQuery('.lcff-subnav[subnav="' + subnav + '"] li').size();
 				for (var i = 0 ; i < subL ; i++){subH += jQuery('.lcff-subnav[subnav="' + subnav + '"] li:eq('+i+')').height() + 5;}
